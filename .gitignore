@@ -179,3 +179,12 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Local credentials, temporary Office files and generated output
+.env
+.env.*
+!.env.example
+~$*.docx
+~$*.xlsx
+*.tmp
+*.log
