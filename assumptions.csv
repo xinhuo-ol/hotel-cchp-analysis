@@ -1,0 +1,9 @@
+﻿item,value,basis
+Building floor area,"120,000 m2",User-provided design condition
+Hotel type,"Urban upscale business hotel, 800 rooms",Regional-average design assumption
+Average annual occupancy,70%,Regional-average operating assumption
+Annual non-HVAC electricity,"11,400 MWh","Scenario input, 95 kWh/(m2 a)"
+Annual cooling demand,"13,800 MWh","Scenario input, 115 kWh/(m2 a)"
+Annual thermal demand,"9,300 MWh",Space heating plus DHW scenario input
+Gas engine,4 x 1.0 MW,Hourly cumulative-load screening and modular dispatch
+PV and storage,"1.2 MWp PV, 1 MW/2 MWh battery, 15 MWh chilled-water storage",Roof-area and peak-shaving scenario assumption

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>上海 12 万平方米宾馆分布式能源系统分析</title>
+  <style>
+    :root { --ink:#1f2937; --muted:#667085; --line:#d0d5dd; --blue:#1d4ed8; --green:#047857; --pale:#f8fafc; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#eef2f6; color:var(--ink); font-family:"Microsoft YaHei", Arial, sans-serif; }
+    main { max-width:1180px; margin:28px auto; padding:0 24px 36px; }
+    header { background:#fff; padding:28px 34px 24px; border-top:5px solid var(--blue); }
+    h1 { margin:0 0 12px; font-size:27px; font-weight:600; }
+    h2 { margin:0 0 14px; font-size:20px; font-weight:600; }
+    h3 { margin:0 0 8px; font-size:16px; font-weight:600; }
+    p { margin:7px 0; line-height:1.7; }
+    .sub { color:var(--muted); font-size:14px; }
+    .section { margin-top:20px; background:#fff; padding:24px 28px; }
+    .cards { display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; }
+    .card { padding:15px; background:var(--pale); border-left:3px solid var(--blue); }
+    .card b { display:block; margin-top:6px; font-size:21px; color:#0f3d8a; }
+    .card span { font-size:13px; color:var(--muted); }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th { background:#244b78; color:white; font-weight:500; }
+    th, td { padding:10px 9px; text-align:center; border:1px solid var(--line); }
+    td:first-child { text-align:left; }
+    tr:nth-child(even) td { background:#f8fafc; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .chart { padding:14px; border:1px solid var(--line); }
+    .chart img { display:block; width:100%; height:auto; }
+    .caption { margin-top:6px; color:var(--muted); font-size:13px; text-align:center; }
+    .flow { display:grid; grid-template-columns:repeat(5, 1fr); gap:8px; align-items:center; margin:12px 0; }
+    .node { min-height:62px; padding:10px; background:#f8fafc; border:1px solid #b8c5d6; text-align:center; font-size:14px; display:flex; align-items:center; justify-content:center; }
+    .arrow { text-align:center; color:var(--blue); font-size:24px; }
+    .note { background:#eff6ff; padding:13px 15px; border-left:3px solid var(--blue); font-size:14px; }
+    .tag { display:inline-block; margin-right:8px; padding:3px 8px; font-size:12px; color:#075985; background:#e0f2fe; }
+    @media (max-width:760px) { .cards,.grid { grid-template-columns:1fr; } .flow { grid-template-columns:1fr; } .arrow { transform:rotate(90deg); } main { padding:0 12px; } header,.section { padding:20px; } }
+    @media print { body { background:#fff; } main { max-width:none; margin:0; padding:0; } .section { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>上海 12 万平方米宾馆分布式冷热电联供系统分析</h1>
+    <p class="sub">设计阶段情景模拟结果 | 负荷、设备及经济参数均为明确列示的区域平均假设，不能替代实测计量数据。</p>
+  </header>
+
+  <section class="section">
+    <h2>1. 设计对象与研究边界</h2>
+    <p>设计对象为上海市一座 120000 m2 城市中高端宾馆。模型按 800 间客房、70% 年平均入住率设置。用能边界包括客房、餐饮宴会、前厅会议、后勤办公、厨房洗衣、车库和机电系统。全年模型按 8760 小时运行，并分别形成夏季、过渡季和冬季典型日。</p>
+    <div class="cards">
+      <div class="card"><span>全年非空调用电</span><b>11400 MWh</b></div>
+      <div class="card"><span>全年制冷需求</span><b>13800 MWh</b></div>
+      <div class="card"><span>全年采暖和热水需求</span><b>9300 MWh</b></div>
+      <div class="card"><span>多能互补方案光伏发电</span><b>1320 MWh</b></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>2. 方案结构</h2>
+    <div class="flow">
+      <div class="node">天然气</div><div class="arrow">→</div><div class="node">4 台 1 MW 燃气内燃机</div><div class="arrow">→</div><div class="node">发电与余热回收</div>
+    </div>
+    <div class="flow">
+      <div class="node">余热回收</div><div class="arrow">→</div><div class="node">生活热水和冬季供热</div><div class="arrow">→</div><div class="node">吸收式制冷</div>
+    </div>
+    <div class="flow">
+      <div class="node">1.2 MWp 光伏</div><div class="arrow">→</div><div class="node">1 MW / 2 MWh 电池储能</div><div class="arrow">→</div><div class="node">宾馆电负荷</div>
+    </div>
+    <div class="flow">
+      <div class="node">电制冷机</div><div class="arrow">↔</div><div class="node">15 MWh 蓄冷水罐</div><div class="arrow">→</div><div class="node">空调冷负荷</div>
+    </div>
+    <p class="note">S0 为常规分供基准方案；S1 为燃气冷热电联供方案；S2 在 S1 基础上叠加光伏、电池储能和蓄冷，作为多能互补优化方案。</p>
+  </section>
+
+  <section class="section">
+    <h2>3. 模拟负荷</h2>
+    <div class="chart"><img src="monthly-loads.svg" alt="逐月模拟冷、热、电能耗曲线"><p class="caption">图 1 逐月模拟能耗。单位：MWh。</p></div>
+    <div class="grid" style="margin-top:20px">
+      <div class="chart"><img src="typical-summer.svg" alt="夏季典型日负荷曲线"><p class="caption">图 2 夏季典型日负荷。单位：MW。</p></div>
+      <div class="chart"><img src="typical-transition.svg" alt="过渡季典型日负荷曲线"><p class="caption">图 3 过渡季典型日负荷。单位：MW。</p></div>
+    </div>
+    <div class="chart" style="margin-top:20px"><img src="typical-winter.svg" alt="冬季典型日负荷曲线"><p class="caption">图 4 冬季典型日负荷。单位：MW。</p></div>
+  </section>
+
+  <section class="section">
+    <h2>4. 多情景对比结果</h2>
+    <table>
+      <thead><tr><th>方案</th><th>年购电量 MWh</th><th>年用气量 万m3</th><th>年运行费用 百万元</th><th>CO2 排放 kt</th><th>一次能源 GWh</th><th>静态回收期 年</th></tr></thead>
+      <tbody>
+        <tr><td>S0 常规分供</td><td>14275.0</td><td>103.36</td><td>16.88</td><td>10.38</td><td>46.71</td><td>-</td></tr>
+        <tr><td>S1 冷热电联供</td><td>6881.1</td><td>205.36</td><td>14.88</td><td>8.36</td><td>37.73</td><td>18.0</td></tr>
+        <tr><td>S2 多能互补</td><td>6126.1</td><td>197.36</td><td>13.74</td><td>7.76</td><td>35.01</td><td>14.0</td></tr>
+      </tbody>
+    </table>
+    <div class="chart" style="margin-top:20px"><img src="scenario-comparison.svg" alt="三种方案成本、碳排放和一次能源对比"><p class="caption">图 5 不同系统方案的模拟结果对比。</p></div>
+    <p><span class="tag">结果解读</span>S2 相对 S0 的年运行费用下降 18.6%，CO2 排放下降 25.2%，一次能源消耗下降 25.1%。该结果以假设的电价、气价和设备投资为前提，需在取得实际商务报价后复核。</p>
+  </section>
+
+  <section class="section">
+    <h2>5. 关键参数敏感性分析</h2>
+    <table>
+      <thead><tr><th>参数</th><th>取值</th><th>S2 年节省运行费 百万元</th><th>S2 静态回收期 年</th></tr></thead>
+      <tbody>
+        <tr><td>电价</td><td>基准值 80%</td><td>1.72</td><td>25.46</td></tr>
+        <tr><td>电价</td><td>基准值</td><td>3.13</td><td>14.00</td></tr>
+        <tr><td>电价</td><td>基准值 120%</td><td>4.54</td><td>9.66</td></tr>
+        <tr><td>气价</td><td>基准值 80%</td><td>3.76</td><td>11.67</td></tr>
+        <tr><td>气价</td><td>基准值</td><td>3.13</td><td>14.00</td></tr>
+        <tr><td>气价</td><td>基准值 120%</td><td>2.51</td><td>17.50</td></tr>
+      </tbody>
+    </table>
+    <p class="note">电价是回收期最敏感的参数。电价低于基准值 20% 时，S2 的静态回收期延长至约 25.5 年；气价上升时，燃气联供的经济性也会减弱。因此，正式方案应以项目实际电价类型、需量电费和天然气采购合同为准。</p>
+  </section>
+
+  <section class="section">
+    <h2>6. 数据使用说明</h2>
+    <p>负荷时序由宾馆典型运行规律、上海季节特征和设计边界构建。原动机采用模块化配置，并按逐时累计负荷进行容量筛选。燃气机组的效率范围和上海饭店项目的运行案例参考《建筑分布式能源系统设计与优化》；课程任务要求和报告章节按课程任务书、设计报告模板执行。后续应优先用建筑图纸、空调系统图、分项电表和热水表数据替换本页假设。</p>
+  </section>
+</main>
+</body>
+</html>
