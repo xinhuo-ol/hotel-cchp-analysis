@@ -1,1 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="940" height="470" viewBox="0 0 940 470"><rect width="100%" height="100%" fill="white"/><text x="78" y="32" font-family="Arial" font-size="22" font-weight="bold">Scenario comparison</text><line x1="78" y1="64.0" x2="912" y2="64.0" stroke="#d0d5dd"/><text x="68" y="69.0" font-family="Arial" font-size="12" text-anchor="end">54</text><line x1="78" y1="131.2" x2="912" y2="131.2" stroke="#d0d5dd"/><text x="68" y="136.2" font-family="Arial" font-size="12" text-anchor="end">43</text><line x1="78" y1="198.4" x2="912" y2="198.4" stroke="#d0d5dd"/><text x="68" y="203.4" font-family="Arial" font-size="12" text-anchor="end">32</text><line x1="78" y1="265.6" x2="912" y2="265.6" stroke="#d0d5dd"/><text x="68" y="270.6" font-family="Arial" font-size="12" text-anchor="end">21</text><line x1="78" y1="332.8" x2="912" y2="332.8" stroke="#d0d5dd"/><text x="68" y="337.8" font-family="Arial" font-size="12" text-anchor="end">11</text><line x1="78" y1="400.0" x2="912" y2="400.0" stroke="#d0d5dd"/><text x="68" y="405.0" font-family="Arial" font-size="12" text-anchor="end">0</text><text x="78.0" y="424" font-family="Arial" font-size="12" text-anchor="middle">S0</text><text x="495.0" y="424" font-family="Arial" font-size="12" text-anchor="middle">S1</text><text x="912.0" y="424" font-family="Arial" font-size="12" text-anchor="middle">S2</text><text x="18" y="232.0" font-family="Arial" font-size="13" transform="rotate(-90 18 232.0)">Value</text><polyline points="78.0,294.4 495.0,306.9 912.0,314.0" fill="none" stroke="#2563eb" stroke-width="3"/><circle cx="78.0" cy="294.4" r="3" fill="#2563eb"/><circle cx="495.0" cy="306.9" r="3" fill="#2563eb"/><circle cx="912.0" cy="314.0" r="3" fill="#2563eb"/><rect x="78" y="446" width="12" height="12" fill="#2563eb"/><text x="96" y="457" font-family="Arial" font-size="12">Operating cost (million yuan)</text><polyline points="78.0,335.1 495.0,347.7 912.0,351.5" fill="none" stroke="#dc2626" stroke-width="3"/><circle cx="78.0" cy="335.1" r="3" fill="#dc2626"/><circle cx="495.0" cy="347.7" r="3" fill="#dc2626"/><circle cx="912.0" cy="351.5" r="3" fill="#dc2626"/><rect x="298" y="446" width="12" height="12" fill="#dc2626"/><text x="316" y="457" font-family="Arial" font-size="12">CO2 emissions (kt)</text><polyline points="78.0,107.8 495.0,164.0 912.0,181.0" fill="none" stroke="#059669" stroke-width="3"/><circle cx="78.0" cy="107.8" r="3" fill="#059669"/><circle cx="495.0" cy="164.0" r="3" fill="#059669"/><circle cx="912.0" cy="181.0" r="3" fill="#059669"/><rect x="518" y="446" width="12" height="12" fill="#059669"/><text x="536" y="457" font-family="Arial" font-size="12">Primary energy (GWh)</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="510" viewBox="0 0 1120 510" role="img" aria-labelledby="chart-title chart-desc">
+  <title id="chart-title">S0、S1、S2 三种系统方案的模拟结果对比</title>
+  <desc id="chart-desc">三个并列柱状图，分别比较年运行费用、年二氧化碳排放和一次能源消耗。</desc>
+  <rect width="1120" height="510" fill="white"/>
+  <style>
+    .title { font-family: "Microsoft YaHei", Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #1f2937; }
+    .tick { font-family: "Microsoft YaHei", Arial, sans-serif; font-size: 12px; fill: #475467; }
+    .label { font-family: "Microsoft YaHei", Arial, sans-serif; font-size: 14px; fill: #1f2937; }
+    .value { font-family: Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #1f2937; }
+    .grid { stroke: #d9e2f3; stroke-width: 1; }
+    .axis { stroke: #667085; stroke-width: 1; }
+  </style>
+
+  <text class="title" x="195" y="38" text-anchor="middle">年运行费用（百万元）</text>
+  <line class="grid" x1="74" y1="90" x2="315" y2="90"/><line class="grid" x1="74" y1="162.5" x2="315" y2="162.5"/><line class="grid" x1="74" y1="235" x2="315" y2="235"/><line class="grid" x1="74" y1="307.5" x2="315" y2="307.5"/><line class="grid" x1="74" y1="380" x2="315" y2="380"/>
+  <line class="axis" x1="74" y1="90" x2="74" y2="380"/><line class="axis" x1="74" y1="380" x2="315" y2="380"/>
+  <text class="tick" x="64" y="384" text-anchor="end">0</text><text class="tick" x="64" y="311.5" text-anchor="end">5</text><text class="tick" x="64" y="239" text-anchor="end">10</text><text class="tick" x="64" y="166.5" text-anchor="end">15</text><text class="tick" x="64" y="94" text-anchor="end">20</text>
+  <rect x="100" y="135.29" width="46" height="244.71" fill="#4f81bd" stroke="#53677a"/><rect x="172" y="164.28" width="46" height="215.72" fill="#c0504d" stroke="#7d4a49"/><rect x="244" y="180.74" width="46" height="199.26" fill="#9bbb59" stroke="#6d8040"/>
+  <text class="value" x="123" y="126" text-anchor="middle">16.88</text><text class="value" x="195" y="155" text-anchor="middle">14.88</text><text class="value" x="267" y="172" text-anchor="middle">13.74</text>
+  <text class="label" x="123" y="405" text-anchor="middle">S0</text><text class="label" x="195" y="405" text-anchor="middle">S1</text><text class="label" x="267" y="405" text-anchor="middle">S2</text>
+
+  <text class="title" x="560" y="38" text-anchor="middle">年二氧化碳排放（kt）</text>
+  <line class="grid" x1="439" y1="90" x2="680" y2="90"/><line class="grid" x1="439" y1="162.5" x2="680" y2="162.5"/><line class="grid" x1="439" y1="235" x2="680" y2="235"/><line class="grid" x1="439" y1="307.5" x2="680" y2="307.5"/><line class="grid" x1="439" y1="380" x2="680" y2="380"/>
+  <line class="axis" x1="439" y1="90" x2="439" y2="380"/><line class="axis" x1="439" y1="380" x2="680" y2="380"/>
+  <text class="tick" x="429" y="384" text-anchor="end">0</text><text class="tick" x="429" y="311.5" text-anchor="end">3</text><text class="tick" x="429" y="239" text-anchor="end">6</text><text class="tick" x="429" y="166.5" text-anchor="end">9</text><text class="tick" x="429" y="94" text-anchor="end">12</text>
+  <rect x="465" y="129.18" width="46" height="250.82" fill="#4f81bd" stroke="#53677a"/><rect x="537" y="177.87" width="46" height="202.13" fill="#c0504d" stroke="#7d4a49"/><rect x="609" y="192.45" width="46" height="187.55" fill="#9bbb59" stroke="#6d8040"/>
+  <text class="value" x="488" y="120" text-anchor="middle">10.38</text><text class="value" x="560" y="169" text-anchor="middle">8.36</text><text class="value" x="632" y="184" text-anchor="middle">7.76</text>
+  <text class="label" x="488" y="405" text-anchor="middle">S0</text><text class="label" x="560" y="405" text-anchor="middle">S1</text><text class="label" x="632" y="405" text-anchor="middle">S2</text>
+
+  <text class="title" x="925" y="38" text-anchor="middle">一次能源消耗（GWh）</text>
+  <line class="grid" x1="804" y1="90" x2="1045" y2="90"/><line class="grid" x1="804" y1="162.5" x2="1045" y2="162.5"/><line class="grid" x1="804" y1="235" x2="1045" y2="235"/><line class="grid" x1="804" y1="307.5" x2="1045" y2="307.5"/><line class="grid" x1="804" y1="380" x2="1045" y2="380"/>
+  <line class="axis" x1="804" y1="90" x2="804" y2="380"/><line class="axis" x1="804" y1="380" x2="1045" y2="380"/>
+  <text class="tick" x="794" y="384" text-anchor="end">0</text><text class="tick" x="794" y="311.5" text-anchor="end">15</text><text class="tick" x="794" y="239" text-anchor="end">30</text><text class="tick" x="794" y="166.5" text-anchor="end">45</text><text class="tick" x="794" y="94" text-anchor="end">60</text>
+  <rect x="830" y="154.16" width="46" height="225.84" fill="#4f81bd" stroke="#53677a"/><rect x="902" y="197.60" width="46" height="182.40" fill="#c0504d" stroke="#7d4a49"/><rect x="974" y="210.79" width="46" height="169.21" fill="#9bbb59" stroke="#6d8040"/>
+  <text class="value" x="853" y="145" text-anchor="middle">46.71</text><text class="value" x="925" y="189" text-anchor="middle">37.73</text><text class="value" x="997" y="202" text-anchor="middle">35.01</text>
+  <text class="label" x="853" y="405" text-anchor="middle">S0</text><text class="label" x="925" y="405" text-anchor="middle">S1</text><text class="label" x="997" y="405" text-anchor="middle">S2</text>
+
+  <rect x="268" y="448" width="14" height="14" fill="#4f81bd"/><text class="tick" x="290" y="460">S0 常规分供</text>
+  <rect x="488" y="448" width="14" height="14" fill="#c0504d"/><text class="tick" x="510" y="460">S1 冷热电联供</text>
+  <rect x="720" y="448" width="14" height="14" fill="#9bbb59"/><text class="tick" x="742" y="460">S2 多能互补</text>
+</svg>
